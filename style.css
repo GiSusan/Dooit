@@ -1,0 +1,275 @@
+:root {
+    --light-background: #e6e6e6;
+    --dark-background: #111212;
+    --light-text: #ffffff;
+    --dark-text: #111212;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: var(--light-background);
+    color: var(--dark-text);
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    
+}
+
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Changa', sans-serif;
+    font-size: 50px;
+
+}
+
+#dark-mode-toggle {
+    border: none;
+    outline: none;
+    position: fixed;
+    top: 30px; /* Adjust as needed */
+    right: 30px; /* Adjust as needed */
+    height: 60px;
+    width: 60px;    
+    border-radius: 50%;
+    background: linear-gradient(145deg, #cfcfcf, #f6f6f6);
+    box-shadow:  5px 5px 7px #c0c0c0,
+                 -5px -5px 7px #ffffff;
+    background-image: url(assets/dark-mode-icon.png);
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+    border: 1px solid #929292 ;
+
+}
+
+
+
+.main-container {
+    background-color: var(--light-background);
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 30px;
+    box-shadow:  5px 5px 7px #7c7c7c,
+             -5px -5px 7px #ffffff;
+}
+
+.add-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    box-shadow: inset 5px 5px 7px #7c7c7c,
+            inset -5px -5px 7px #ffffff;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+.add-task button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(145deg, #cfcfcf, #f6f6f6);
+    box-shadow:  5px 5px 7px #7c7c7c,
+                 -5px -5px 7px #ffffff;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(assets/dark-unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 8px;
+
+}
+
+ul li.checked{
+    text-decoration: line-through;
+}
+
+
+ul li.checked::before {
+    background-image: url(assets/dark-checked.png);
+}
+
+/* delete cross */
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+
+}
+
+ul li span:hover {
+    background: linear-gradient(145deg, #cfcfcf, #f6f6f6);
+    box-shadow:  5px 5px 7px #7c7c7c,
+             -5px -5px 7px #ffffff;
+}
+
+
+/*  _________________
+        DARK MODE
+    _________________
+*/
+
+.dark-mode body, .dark-mode html {
+    background-color: #111212 !important;
+    color: var(--light-text) !important;
+}
+
+
+.dark-mode .main-container {
+    background-color: var(--dark-background);
+    box-shadow:  5px 5px 14px #070707,
+    -5px -5px 14px #1b1d1d;
+}
+
+.dark-mode .add-task {
+    background: linear-gradient(145deg, #121313, #0f1010);
+    box-shadow:  5px 5px 14px #070707,
+            -5px -5px 14px #1b1d1d;
+}
+
+.dark-mode input {
+    background-color: var(--dark-background);
+    color: var(--light-text);
+}
+
+.dark-mode ul li {
+    color: var(--light-text);
+}
+
+.dark-mode ul li span:hover {
+    background: linear-gradient(145deg, #0f1010, #121313);
+    box-shadow:  5px 5px 14px #070707,
+                 -5px -5px 14px #1b1d1d;
+}
+
+.dark-mode .add-task button {
+    background: linear-gradient(145deg, #0f1010, #121313);
+    box-shadow:  5px 5px 14px #070707,
+             -5px -5px 14px #1b1d1d;
+    color: var(--light-text);
+}
+
+.dark-mode ul li::before {
+    background-image: url(assets/light-unchecked.png);
+}
+
+.dark-mode ul li.checked::before {
+    background-image: url(assets/light-checked.png);
+}
+
+
+.dark-mode #dark-mode-toggle {
+    background-image: url(assets/light-mode-icon.png);
+    box-shadow:  5px 5px 14px #070707,
+            -5px -5px 14px #1b1d1d;
+}
+
+.dark-mode #dark-mode-toggle:hover {
+    border: 1px solid #646464 ;
+
+}
+
+
+/*  _________________
+       END DARK MODE
+    _________________
+*/
+
+
+@media only screen and (max-width: 600px) {
+    .main-container {
+        width: 100%;
+        max-width: 300px;
+        position: relative;
+
+    }
+
+    .add-task input {
+        max-width: 100px;
+        padding: 1px;
+        font-size: 12px;
+        
+            
+    }
+
+    .add-task {
+        max-height: 30px;
+            
+    }
+
+    .add-task button {
+        padding: 10px 5px;
+        width: 30%;
+        font-size: 12px;
+            
+    }
+
+    ul li {
+        font-size: 12px;
+    }
+
+    ul li span {
+        font-size: 20px;
+        top: 0;
+        text-align: center;
+    }
+
+    ul li::before {
+        height: 20px;
+        width: 20px;
+    }
+
+}
