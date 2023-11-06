@@ -179,8 +179,8 @@ ul li span:hover {
 
 .dark-mode .add-task {
     background: linear-gradient(145deg, #121313, #0f1010);
-    box-shadow:  5px 5px 14px #070707,
-            -5px -5px 14px #1b1d1d;
+    box-shadow: inset 5px 5px 10px #070707,
+    inset -5px -5px 10px #1b1d1d;
 }
 
 .dark-mode input {
