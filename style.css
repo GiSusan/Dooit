@@ -87,6 +87,7 @@ input {
     padding: 10px;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
+    font-weight: bold;
 }
 
 
@@ -105,6 +106,7 @@ input {
 ul li {
     list-style: none;
     font-size: 17;
+    font-weight: bold;
     padding: 12px 8px 12px 50px;
     user-select: none;
     cursor: pointer;
